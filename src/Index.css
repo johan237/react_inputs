@@ -1,0 +1,309 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    
+    body {
+        padding: 30px 70px;
+        background: #FFFFFF;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 500;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    body>h1 {
+        text-align: center;
+        color: #4F4F4F;
+        margin-bottom: 30px;
+    }
+    
+    .flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .flexCol {
+        gap: 7px;
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        flex-direction: column;
+    }
+    
+    .container {
+        margin-bottom: 25px;
+    }
+    
+    .container h2 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 14px;
+        color: #000000c7;
+    }
+    
+    #root {
+        width: 75%;
+        margin: auto;
+    }
+    
+    .btn {
+        max-width: max-content;
+        display: flex;
+        outline: none;
+        border: none;
+        background: #E0E0E0;
+        box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+        border-radius: 6px;
+        padding: 8px 16px;
+        color: #3F3F3F;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        gap: 10px;
+        font-size: 14px;
+    }
+    
+    .btn:hover,
+    .btn:focus {
+        background: #AEAEAE;
+    }
+    
+    .btn.btn-sm {
+        padding: 6px 12px;
+    }
+    
+    .btn.btn-lg {
+        padding: 11px 22px;
+    }
+    
+    .btn.btn-primary {
+        color: white;
+        background-color: #2962FF;
+        box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+    }
+    
+    .btn.btn-primary:hover,
+    .btn.btn-primary:focus {
+        background-color: #0039CB;
+    }
+    
+    .btn.btn-danger {
+        color: white;
+        background: #D32F2F;
+        box-shadow: 4px 2px 3px rgba(211, 47, 47, 0.2);
+    }
+    
+    .btn.btn-danger:hover,
+    .btn.btn-danger:focus {
+        background: #9A0007;
+    }
+    
+    .btn.btn-secondary {
+        color: white;
+        background: #455A64;
+        box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
+    }
+    
+    .btn.btn-secondary:hover,
+    .btn.btn-secondary:focus {
+        background: #1C313A;
+    }
+    
+    button:disabled {
+        background: #E0E0E0;
+        color: #9E9E9E;
+    }
+    
+    button#outline {
+        color: #3D5AFE;
+        border: 1px solid #3D5AFE;
+        background: white;
+        box-shadow: none;
+    }
+    
+    button#outline:hover,
+    button#outline:focus {
+        background: rgba(41, 98, 255, 0.1);
+    }
+    
+    button#text {
+        background: white;
+        border: none;
+        color: #3D5AFE;
+        box-shadow: none;
+    }
+    
+    button#text:disabled {
+        background: white;
+        border: none;
+        color: #9E9E9E;
+    }
+    
+    button#outline:disabled {
+        background: white;
+        border-color: #E0E0E0;
+        color: #9E9E9E;
+    }
+    /* INPUT STYLE */
+    
+    .inputDiv {
+        cursor: pointer;
+        gap: 3px;
+        width: 200px;
+        align-items: flex-start;
+    }
+    
+    .inputDiv.inputDiv--fullWidth {
+        min-width: 100%;
+    }
+    
+    .inputDiv.inputDiv--error label,
+    .inputDiv.inputDiv--error small {
+        color: #D32F2F;
+    }
+    
+    .inputDiv.inputDiv--multiline input {
+        height: 150px;
+    }
+    
+    .inputDiv.inputDiv--error input {
+        border: 1px solid #D32F2F
+    }
+    
+    .inputDiv.inputDiv--error:hover input {
+        border: 1px solid #333333;
+    }
+    
+    .inputDiv.inputDiv--error:hover label {
+        color: #333333;
+    }
+    
+    .inputDiv.inputDiv--error input:focus {
+        border-color: #D32F2F;
+    }
+    
+    .inputDiv label,
+    input {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        color: #828282;
+    }
+    
+    input {
+        transition: all 0.3s ease-in-out;
+        outline: none;
+        display: block;
+        width: 100%;
+        height: 56px;
+        padding: 18px auto;
+        padding-left: 12px;
+        border: 1px solid #828282;
+        border-radius: 6px;
+        color: #333333;
+    }
+    
+    textarea {
+        outline: none;
+        resize: none;
+        width: 200px;
+        height: 150px;
+        border: 1px solid #828282;
+        border-radius: 8px;
+    }
+    
+    input.input--sm {
+        height: 40px;
+    }
+    
+    input.input--sm {
+        height: 40px;
+    }
+    
+    input::placeholder {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        color: #828282;
+    }
+    
+    input:hover {
+        border: 1px solid #333333;
+    }
+    
+    input:focus {
+        border-color: #2962FF;
+    }
+    
+    .inputDiv:focus-within label {
+        color: #2962FF;
+    }
+    
+    .inputDiv.inputDiv--error:focus-within label {
+        color: #D32F2F;
+    }
+    
+    input:disabled {
+        background-color: grey !important;
+    }
+    
+    .inputDiv--disabled input {
+        border: 1px solid #E0E0E0;
+        background-color: rgba(128, 128, 128, 0.315);
+    }
+    
+    .inputDiv small {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: #828282;
+    }
+    
+    .inputDiv.inputDiv--startIcon input {
+        /* border: 2px solid red; */
+        background: url(./assets/lock_FILL0_wght400_GRAD0_opsz48.svg) no-repeat;
+        background-size: 30px;
+        background-position: 3% center;
+        padding-left: 45px;
+    }
+    
+    .inputDiv.inputDiv--endIcon input {
+        /* border: 2px solid red; */
+        background: url(./assets/lock_FILL0_wght400_GRAD0_opsz48.svg) no-repeat;
+        background-size: 30px;
+        background-position: 95% center;
+        padding-right: 5px;
+    }
+    
+    footer {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #9E9E9E;
+        /* border: 2px solid yellow; */
+    }
+    
+    footer span {
+        font-size: 18px;
+        text-transform: capitalize;
+        text-decoration: underline;
+    }
+    
+    .inputBox {
+        margin: auto;
+        max-width: 550px;
+        flex-wrap: wrap;
+        /* border: 1px solid blue; */
+    }
